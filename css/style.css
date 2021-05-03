@@ -1,0 +1,238 @@
+* {
+   
+    font-family: 'Kanit', sans-serif;
+}
+body{
+    text-align: center;
+    margin: 0;
+}
+.bg-darkgrey{
+    background: darkgray;
+    color: white;
+}
+.bg-white{
+    background: white;
+    color: rgba(4,9,30,0.7);
+}
+.bg-line-darkblue{
+    background: rgba(4,9,30,0.7);
+}
+section{
+    padding: 40px 20px;
+}
+.header{
+    min-height: 10vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: darkcyan;
+    display: block;
+    margin: auto;
+    transition:  0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+nav .openmenu{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .closemenu{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+/*  */
+
+.logochibi{
+    width: 200px;
+    border-radius: 50%;
+}
+.content-header h1{
+    font-size: 55px;
+    line-height: 55px;
+}
+.line{
+    width: 200px;
+    height: 5px;
+    display: inline-block;
+}
+.service-container{
+    max-width: 1200px;
+    margin: auto;
+}
+.service-item{
+    width: calc(33% - 20px);
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    vertical-align: text-top;
+}
+.feedback-container{
+    max-width: 1200px;
+    margin: auto;
+}
+.feedback-item{
+    width:  33%;
+    display: inline-block;
+    margin: auto;
+}
+.blog{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+.blog-container{
+    width:  calc(33.33%-4px);
+    display: inline-block;
+    margin: auto;
+    border: 2px solid black;
+    
+}
+
+.input-fields {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+}
+.input-fields input , textarea {
+    border: none;
+    border-bottom: 2px solid rgb(180, 180, 180);
+    outline: none;
+    margin-top:  20px;
+    display: flex;
+    width: 100%;
+}
+.input-fields button{
+    outline: none;
+    margin-top:  20px;
+    display: flex;
+    padding: 5px 10px;
+    
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255,255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: rgba(4,9,30,0.7);
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: rgb(61, 62, 63);
+    background-color: #ffffff;
+}
+.to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 7px 12px;
+    background: rgba(197, 196, 196, 0.801);
+    box-shadow: rgba(0, 0,0, 0.15);
+    display: none;
+}
+
+@media(min-width: 1200px){
+
+}
+@media(max-width: 768px){
+    nav .nav-links{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         background:rgba(0, 0,0, 0.5);
+         transition: top 1s ease;
+         display: none;
+         
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    nav .nav-links .closemenu{
+        color: white;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+    }
+    nav .openmenu{
+        display: block;
+    }
+    .service-item {
+        width: 40%;
+        display: inline-block;
+        margin: auto;
+        padding: 15px;
+    }
+}
+
+@media(min-width: 375px){
+    .service-item{
+        width: 100%;
+    }
+    .line{
+        width: 100px;
+        height: 5px;
+        display: inline-block;
+    }
+    .feedback-item {
+        width: 100%;
+    }
+}
+
